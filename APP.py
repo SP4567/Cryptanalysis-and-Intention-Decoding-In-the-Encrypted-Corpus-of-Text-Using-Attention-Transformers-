@@ -89,7 +89,12 @@ if st.button("Decrypt and Decode"):
             intention = decode_intention_with_nlp(decoded_sentence_str)
 
             st.subheader("Decrypted Sentence:")
-            st.write(decoded_sentence_str)
+            try:
+                # Critical code here
+                decoded_sentence_str = convert_to_sentence(decoded_sentence[0])
+                st.write(f"Decoded sentence string: '{decoded_sentence_str}'")
+            except Exception as e:
+                st.error(f"An error occurred during decoding: {e}")
             st.subheader("Intention:")
             st.write(intention)
         except Exception as e:
