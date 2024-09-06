@@ -7,7 +7,7 @@ import string
 # Load the trained Transformer model
 @st.cache_resource
 def load_transformer_model():
-    return tf.keras.models.load_model('transformer_model.h5')
+    return tf.keras.models.load_model('transformer_model_improved (6).h5')
 
 # Load a pre-trained sentiment analysis model from Hugging Face
 @st.cache_resource
